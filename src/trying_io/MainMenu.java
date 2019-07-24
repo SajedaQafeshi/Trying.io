@@ -5,6 +5,11 @@
  */
 package trying_io;
 
+import static java.lang.System.exit;
+import javafx.event.*;//هاي لشو ؟؟
+import javafx.stage.WindowEvent;
+//import java.awt.event.WindowEvent;
+
 /**
  *
  * @author Sajeda Qafeshi
@@ -17,7 +22,10 @@ public class MainMenu extends javax.swing.JFrame {
     public MainMenu() {
         initComponents();
     }
-
+    //public void close(){
+      //  WindowEvent window = new WindowEvent(this, WindowEvent.)
+    
+    //}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -27,21 +35,79 @@ public class MainMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        exit_main = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 204, 255));
+
+        jLabel1.setFont(new java.awt.Font("Viner Hand ITC", 1, 20)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel1.setText("Welcome to Trying.io");
+
+        jButton1.setFont(new java.awt.Font("Andalus", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 153, 153));
+        jButton1.setText("Upload Source Code");
+
+        jButton2.setFont(new java.awt.Font("Andalus", 1, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(0, 153, 153));
+        jButton2.setText("Practice");
+
+        exit_main.setFont(new java.awt.Font("Andalus", 1, 14)); // NOI18N
+        exit_main.setForeground(new java.awt.Color(0, 153, 153));
+        exit_main.setText("Exit");
+        exit_main.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exit_mainActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(85, 85, 85)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(110, 110, 110)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(exit_main, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                .addContainerGap(101, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(11, 11, 11)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(exit_main, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void exit_mainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exit_mainActionPerformed
+
+       // exit_main button = new exit_main("close");
+     //  this.dispatchEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));
+        // TODO add your handling code here:
+        
+        
+       dispose();
+    }//GEN-LAST:event_exit_mainActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +145,9 @@ public class MainMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton exit_main;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

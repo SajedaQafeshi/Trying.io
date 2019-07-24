@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package trying_io;
-
+import trying_io.*;
 /**
  *
  * @author Sajeda Qafeshi
@@ -16,6 +16,10 @@ public class Trying_io {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        UploadSourcCode uploade = new UploadSourcCode();
+        uploade.setVisible(true);
+        
     }
     
 }
